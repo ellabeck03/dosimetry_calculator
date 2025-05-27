@@ -10,6 +10,7 @@
 #include<chrono>
 
 #include "radiation_source.h"
+#include "alpha_source.h"
 
 using std::string;
 

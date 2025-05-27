@@ -25,6 +25,7 @@ protected:
     double activity_bq;
     double half_life_s;
     double emission_prob{1};
+    struct positionVector{double x, y, z;};
 
 public:
     // default constructor
@@ -40,11 +41,13 @@ public:
     double getActivity() const {return activity_bq;}
     double getHalfLife() const {return half_life_s;}
     double getEmissionProbability() const {return emission_prob;}
+    const positionVector& getPosition() const;
 
     // setters
     void setEnergy(double energy_kev_in);
     void setActivity(double activity_bq_in);
     void setEmissionProbability(double probability_in);
+    void setPosition(const positionVector&);
 
     // other functions
     double findCurrentActivity(double time_elapsed_s);
